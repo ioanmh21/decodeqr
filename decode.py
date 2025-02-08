@@ -19,7 +19,8 @@ mask_pattern = df.get_mask_pattern(format_info)
 error_correction_level = df.get_error_correction_level(format_info)
 error_correction_bits = df.get_error_correction_bits(format_info)
 
-mat = masks.mask(masks.correct_mask(mask_pattern),mat)
+mat = masks.mask(masks.correct_mask(mask_pattern),mat)#pt cod generat cu biblioteca python
+#mat = masks.mask(mask_pattern,mat)
 
 data_bits = df.extract_data_bits(mat)
 
