@@ -89,7 +89,7 @@ The decoded data will be printed to the console.
 -   `correct_mask(k)`:
     -   A utility function to map the mask pattern bits extracted from the format information to the correct mask function index.
 
-## Limitations ⚠️
+## Limitations
 
 -   This implementation currently supports decoding specific versions of QR codes (implied by the `target_size=29` in `png_to_binary_matrix` and the version calculation `((n - 21) // 4) + 1`).
 -   Error correction is not explicitly performed on the data bits; the `error_correction_level` and `error_correction_bits` are extracted but not used for correcting errors in the data itself. This means if the QR code is damaged, it might not decode correctly.
