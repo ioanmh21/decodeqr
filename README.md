@@ -1,27 +1,27 @@
-# QR Code Decoder 🔳
+# QR Code Decoder
 
-This project provides a Python implementation for decoding QR codes. It can read a QR code image (PNG format), extract its binary data, apply the necessary unmasking, and then decode the embedded information such as the encoding mode and the actual message. 🚀
+This project provides a Python implementation for decoding QR codes. It can read a QR code image (PNG format), extract its binary data, apply the necessary unmasking, and then decode the embedded information such as the encoding mode and the actual message. 
 
-## Files 📂
+## Files
 
 - `decode.py`: The main script that orchestrates the QR code decoding process. It handles image loading, preprocessing, and calling the decoding functions.
 - `decode_functions.py`: Contains various helper functions for extracting format information, determining mask patterns and error correction levels, and decoding the data bits based on the encoding mode.
 - `masks.py`: Defines the different mask patterns used in QR codes and functions to apply and correct these masks. It also includes functions to identify and exclude fixed patterns (finder patterns, alignment patterns, timing patterns, etc.) from the data area.
 - `qrcode.png`: An example QR code image used as input for the `decode.py` script. (This file is expected to be in the same directory as `decode.py`.)
 
-## Features ✨
+## Features
 
--   **PNG to Binary Matrix Conversion**: Converts a QR code PNG image into a binary matrix representation. 🖼️
--   **Debordare (Cropping)**: Automatically crops the QR code image to remove any surrounding whitespace. ✂️
--   **Format Information Extraction**: Extracts the format information bits from the QR code, which contain details about the mask pattern and error correction level. 🔍
--   **Mask Pattern Detection and Unmasking**: Identifies the mask pattern applied to the QR code and unmasks the data region to reveal the original data bits. 🕵️‍♀️
--   **Data Bit Extraction**: Extracts the raw data bits from the unmasked QR code matrix. 📊
--   **Encoding Mode Detection**: Determines the encoding mode (Numeric, Alphanumeric, Byte, Kanji) of the QR code data. 💡
--   **Character Count Extraction**: Reads the character count indicator for the respective encoding mode. 🔢
--   **Data Decoding**: Decodes the extracted data bits into a human-readable string based on the detected encoding mode. 📝
--   **Visualization**: (Commented out in `decode.py` but can be enabled) Provides a `display` function to visualize the binary matrix representation of the QR code. 🖼️ (This is a potential feature, currently commented out)
+-   **PNG to Binary Matrix Conversion**: Converts a QR code PNG image into a binary matrix representation. 
+-   **Debordare (Cropping)**: Automatically crops the QR code image to remove any surrounding whitespace. 
+-   **Format Information Extraction**: Extracts the format information bits from the QR code, which contain details about the mask pattern and error correction level. 
+-   **Mask Pattern Detection and Unmasking**: Identifies the mask pattern applied to the QR code and unmasks the data region to reveal the original data bits. 
+-   **Data Bit Extraction**: Extracts the raw data bits from the unmasked QR code matrix. 
+-   **Encoding Mode Detection**: Determines the encoding mode (Numeric, Alphanumeric, Byte, Kanji) of the QR code data. 
+-   **Character Count Extraction**: Reads the character count indicator for the respective encoding mode. 
+-   **Data Decoding**: Decodes the extracted data bits into a human-readable string based on the detected encoding mode. 
+-   **Visualization**: (Commented out in `decode.py` but can be enabled) Provides a `display` function to visualize the binary matrix representation of the QR code. (This is a potential feature, currently commented out)
 
-## How to Run ▶️
+## How to Run 
 
 1.  **Ensure you have the necessary libraries installed**:
     ```bash
@@ -33,9 +33,9 @@ This project provides a Python implementation for decoding QR codes. It can read
     python decode.py
     ```
 
-The decoded data will be printed to the console. 🖥️
+The decoded data will be printed to the console. 
 
-## Code Structure and Logic 🧠
+## Code Structure and Logic 
 
 ### `decode.py`
 
